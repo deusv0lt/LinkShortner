@@ -1,0 +1,127 @@
+@font-face {
+  font-family: Droid;
+  src: url("fonts/DisposableDroidBB.ttf");
+}
+
+html,
+body {
+  height: 100%;
+}
+h1,
+h3 {
+  font-family: "Droid";
+  color: #fff;
+}
+
+body {
+  font-size: 16px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 0 5px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 1.2em;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Droid";
+  font-size: 20px;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  background: #bada55;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.copy,
+.paste {
+  flex-grow: 1;
+  width: 50%;
+}
+
+.copy {
+  border-right: 2px solid;
+  padding-right: 10px;
+
+  h3 {
+    span {
+      background: #76ecff;
+    }
+  }
+
+  input {
+    padding-right: 90px;
+  }
+}
+
+.paste {
+  padding-left: 10px;
+
+  h3 {
+    span {
+      background: #fae916;
+    }
+  }
+}
+
+form {
+  position: relative;
+  width: 100%;
+
+  input {
+    display: block;
+    width: 100%;
+    border: 3px solid;
+    outline: 0;
+    background: #fff;
+    font-size: 25px;
+    padding: 5px 4px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: 0;
+    outline: 0;
+    color: #fff;
+    background: #000;
+    font-family: "VT323", monospace;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 0.08em 0.8em;
+    cursor: pointer;
+  }
+}
