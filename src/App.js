@@ -5,27 +5,23 @@ import { loadProgressBar } from "axios-progress-bar";
 const App = () => {
   const [link, setLink] = useState("");
   const [short, setShort] = useState("");
-  const token = "TOKEN GOES HERE";
 
   const onSubmit = (e) => {
     e.preventDefault();
     console.log(link);
 
     Axios.post(
-      "https://api-ssl.bitly.com/v4/shorten",
-      { long_url: link },
+      "https://70kjgxiij1.execute-api.ap-south-1.amazonaws.com/URLShortener-Create",
       {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
+        longURL: link,
       }
     )
       .then((response) => {
-        setShort(response.data.link);
+        console.log(response);
+        setShort(response.data);
       })
       .catch((error) => {
-        console.log(error.response.data.description);
+        console.log(error);
       });
   };
 
